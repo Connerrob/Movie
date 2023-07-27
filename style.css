@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: hsla(0, 11%, 3%, 1);
+  background-image: radial-gradient(
+      at 40% 20%,
+      hsla(22, 10%, 6%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 80% 0%, hsla(187, 16%, 6%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, hsla(341, 1%, 19%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, hsla(338, 3%, 25%, 1) 0px, transparent 50%);
+  color: white;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* START OF MOVIE CARD AND DETAILS */
+#movie-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.movie-card {
+  background-image: linear-gradient(
+    to left top,
+    #5c5d5e,
+    #474748,
+    #323233,
+    #1f1f1f,
+    #090909
+  );
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.movie-card h2 {
+  margin-top: 0;
+}
+
+.movie-card p {
+  margin-bottom: 10px;
+  color: silver;
+}
+
+.movie-card img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+/* END OF MOVIE CARD AND DETAILS */
+
+/* NAV BAR WITH GENRE'S AND BUTTONS AT TOP FOR CHANGING PAGES */
+#nav-menu {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  height: 7em;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-wrap: nowrap;
+  padding-left: 0;
+  margin-block: 0;
+  overflow-x: auto;
+  list-style: none;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 20px;
+}
+
+li {
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  margin: 0 5px;
+  font-size: auto;
+  border: 2px solid white;
+  transition: background-color 0.3s ease;
+  background-color: black;
+  box-shadow: 2px white;
+}
+#nav-menu > li {
+  transform: skew(25deg);
+}
+
+#nav-menu > li > a {
+  transform: skew(-25deg);
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+li:hover {
+  background-color: #222525;
+}
+.buttons {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  height: 7em;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-wrap: nowrap;
+  padding-left: 0;
+  margin-block: 0;
+  overflow-x: auto;
+  list-style: none;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 20px;
+}
+.current {
+  background-color: #222525;
+}
+/* END OF NAV BAR*/
+
+/* START OF SCROLL BAR ARROW */
+#nav-menu::-webkit-scrollbar {
+  display: none;
+}
+
+.scrolly {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.scroll-arrow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.scroll-arrow i {
+  color: #000000;
+  font-size: 20px;
+}
+
+#scroll-left {
+  margin-right: 10px;
+  left: 0;
+}
+
+#scroll-right {
+  margin-left: 10px;
+}
+/* END OF SCROLL BAR ARROWS */
